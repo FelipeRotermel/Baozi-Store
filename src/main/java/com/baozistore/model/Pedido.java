@@ -14,7 +14,7 @@ public class Pedido {
     private Long id;
 
     @Column(name = "client_id", nullable = false)
-    private Long clientId;
+    private Long clienteId;
 
     @Column(name = "produto_id", nullable = false)
     private Long produtoId;
@@ -28,8 +28,8 @@ public class Pedido {
 
     public Pedido() {}
 
-    public Pedido(Long clientId, Long produtoId, Integer quantidade) {
-        this.clientId = clientId;
+    public Pedido(Long clienteId, Long produtoId, Integer quantidade) {
+        this.clienteId = clienteId;
         this.produtoId = produtoId;
         this.quantidade = quantidade;
     }
@@ -46,12 +46,12 @@ public class Pedido {
         this.id = id;
     }
 
-    public Long getClientId() {
-        return clientId;
+    public Long getClienteId() {
+        return clienteId;
     }
 
-    public void setClientId(Long clientId) {
-        this.clientId = clientId;
+    public void setClienteId(Long clienteId) {
+        this.clienteId = clienteId;
     }
 
     public Long getProdutoId() {
@@ -72,6 +72,6 @@ public class Pedido {
 
     @Override
     public String toString() {
-        return "Pedido{id=" + id + ", clientId=" + clientId + ", produtoId=" + produtoId + ", quantidade=" + quantidade + "}";
+        return "Pedido{id=" + id + ", clienteId=" + clienteId + ", produtoId=" + produtoId + ", quantidade=" + quantidade + "}";
     }
 }
